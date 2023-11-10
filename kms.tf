@@ -2,7 +2,7 @@ module "kms" {
   count = local.create_kms_key ? 1 : 0
 
   source  = "app.terraform.io/aedificans/Base-KMS-Key/aws"
-  version = "1.0.0"
+  version = "1.0.1"
 
   naming              = var.naming
   environment         = var.environment
