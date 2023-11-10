@@ -21,7 +21,7 @@ This module provisions an EC2 Key-Pair
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_kms"></a> [kms](#module\_kms) | app.terraform.io/aedificans/Base-KMS-Key/aws | 1.0.0 |
+| <a name="module_kms"></a> [kms](#module\_kms) | app.terraform.io/aedificans/Base-KMS-Key/aws | 1.0.1 |
 
 ## Resources
 
@@ -42,7 +42,7 @@ This module provisions an EC2 Key-Pair
 | <a name="input_private_key_kms_arn"></a> [private\_key\_kms\_arn](#input\_private\_key\_kms\_arn) | A KMS Key ARN for use in encrypting the secret that stores the private key | `string` | `null` | no |
 | <a name="input_private_key_kms_key_rotation_enabled"></a> [private\_key\_kms\_key\_rotation\_enabled](#input\_private\_key\_kms\_key\_rotation\_enabled) | Enable rotation of KMS key leveraged in encrypting the SecretsManager secret which contains the private key | `bool` | `true` | no |
 | <a name="input_private_key_secret_recovery_window_in_days"></a> [private\_key\_secret\_recovery\_window\_in\_days](#input\_private\_key\_secret\_recovery\_window\_in\_days) | The number of days to retain the SecretsManager secret which contains the private key | `number` | `0` | no |
-| <a name="input_tagging"></a> [tagging](#input\_tagging) | A collection of tags as key-value pairs to be applied to all applicable provisioned resources | <pre>object({<br>    additional_tags = optional(map(any), {})<br>    network         = string<br>    organization    = string<br>    owner           = string<br>    service_pattern = string<br>    tag_key_prefix  = string<br>  })</pre> | n/a | yes |
+| <a name="input_tagging"></a> [tagging](#input\_tagging) | A collection of tags as key-value pairs to be applied to all applicable provisioned resources | <pre>object({<br>    additional_tags = optional(map(any), {})<br>    network         = string<br>    organization    = string<br>    owner           = string<br>    service_name    = optional(string, null)<br>    service_pattern = string<br>    tag_key_prefix  = string<br>  })</pre> | n/a | yes |
 
 ## Outputs
 
